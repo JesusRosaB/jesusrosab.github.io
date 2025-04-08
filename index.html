@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesús Rosa Bilbao</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
+        <div class="container">
+            <!-- Botón hamburguesa para móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                
+                <div class="btn-group profile-toggle ms-auto me-3" role="group" aria-label="Profile selection">
+                    <!-- Botones en español -->
+                    <button class="btn btn-outline-primary active" data-profile="professional" data-lang="es">Profesional</button>
+                    <button class="btn btn-outline-primary" data-profile="researcher" data-lang="es">Investigador</button>
+                    
+                    <!-- Botones en inglés (ocultos inicialmente) -->
+                    <button class="btn btn-outline-primary active d-none" data-profile="professional" data-lang="en">Professional</button>
+                    <button class="btn btn-outline-primary d-none" data-profile="researcher" data-lang="en">Researcher</button>
+                </div>
+
+                <ul class="nav-links navbar-nav ms-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-lang="es">Inicio</a>
+                        <a class="nav-link d-none" href="#home" data-lang="en">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-lang="es">Sobre Mí</a>
+                        <a class="nav-link d-none" href="#about" data-lang="en">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education" data-lang="es">Formación</a>
+                        <a class="nav-link d-none" href="#education" data-lang="en">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience" data-lang="es">Experiencia</a>
+                        <a class="nav-link d-none" href="#experience" data-lang="en">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" data-lang="es">Habilidades</a>
+                        <a class="nav-link d-none" href="#skills" data-lang="en">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications" data-lang="es">Certificaciones</a>
+                        <a class="nav-link d-none" href="#certifications" data-lang="en">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-lang="es">Contacto</a>
+                        <a class="nav-link d-none" href="#contact" data-lang="en">Contact</a>
+                    </li>
+
+                    <!-- Selector de idioma -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="current-lang-flag" class="flag-icon flag-icon-es"></span> <span id="current-lang">ES</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="changeLanguage('es')">
+                                    <span class="flag-icon flag-icon-es"></span> Español
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="changeLanguage('en')">
+                                    <span class="flag-icon flag-icon-us"></span> English
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sección Hero -->
+    <section class="hero" id="home">
+        <h1 data-lang="es">Jesús Rosa Bilbao</h1>
+        <h1 data-lang="en" class="d-none">Jesús Rosa Bilbao</h1>
+            
+        <p data-lang="es">Desarrollador Full Stack | Director IT | Profesor Docente Investigador</p>
+        <p data-lang="en" class="d-none">Full Stack Developer | IT Director | Research Professor</p>
+            
+        <a href="#contact" class="btn btn-primary" data-lang="es">Contáctame</a>
+        <a href="#contact" class="btn btn-primary d-none" data-lang="en">Contact Me</a>
+    </section>      
+
+    <!-- Sección Sobre Mí -->
+    <section id="about" class="container">
+        <h2 class="section-title" data-lang="es">Sobre Mí</h2>
+        <h2 class="section-title d-none" data-lang="en">About Me</h2>
+        
+        <div class="row">
+            <div class="col-lg-8">
+                <div data-lang="es">
+                    <p>¡Hola! Soy <strong>Jesús Rosa Bilbao</strong>, un profesional polifacético con más de <strong>5 años</strong> de experiencia combinando la dirección tecnológica, el desarrollo de software y la docencia universitaria. Mi trayectoria única me posiciona en la intersección perfecta entre el mundo empresarial y académico.</p>
+                    <p>Como <strong>Director IT</strong> en Hotta (Therminer), lidero estrategias tecnológicas innovadoras mientras que, como <strong>Profesor</strong> en la Universidad de Cádiz, formo a la próxima generación de profesionales en ciberseguridad y desarrollo de software. Mi experiencia como <strong>Desarrollador Full Stack</strong> en instituciones públicas y privadas me ha permitido dominar múltiples tecnologías, implementar metodologías ágiles y diseñar arquitecturas de software robustas.</p>
+                    <p>Mi filosofía es que la excelencia técnica debe ir acompañada de una comunicación clara y un enfoque estratégico. Siempre busco proyectos desafiantes que me permitan aplicar mi experiencia en entornos de alta complejidad donde pueda generar un impacto significativo y mensurable.</p>
+                    <p>Fuera del ámbito profesional, soy un entusiasta de las nuevas tecnologías, practico deportes al aire libre y disfruto compartiendo conocimientos a través de conferencias y workshops. Creo firmemente que la combinación de pensamiento analítico y creatividad es la clave para resolver los desafíos tecnológicos más complejos.</p>
+                </div>
+                <div data-lang="en" class="d-none">
+                    <p>Hello! I'm <strong>Jesús Rosa Bilbao</strong>, a multifaceted professional with over <strong>5 years</strong> of experience combining technology leadership, software development, and university teaching. My unique career path positions me at the perfect intersection between the business and academic worlds.</p>
+                    <p>As an <strong>IT Director</strong> at Hotta (Therminer), I lead innovative technological strategies, while as a <strong>Professor</strong> at the University of Cádiz, I train the next generation of professionals in cybersecurity and software development. My experience as a <strong>Full Stack Developer</strong> in public and private institutions has allowed me to master several technologies, implement agile methodologies, and design robust software architectures.</p>
+                    <p>My philosophy is that technical excellence must be accompanied by clear communication and a strategic approach. I always seek challenging projects that allow me to apply my expertise in highly complex environments where I can generate significant and measurable impact.</p>
+                    <p>Outside the professional realm, I'm a technology enthusiast, I practice outdoor sports, and enjoy sharing knowledge through conferences and workshops. I firmly believe that the combination of analytical thinking and creativity is the key to solving the most complex technological challenges.</p>
+                </div>
+            </div>
+            <div class="profile-img col-lg-4 text-center">
+                <img src="img/profile.png" alt="Foto de perfil" class="img-fluid rounded-circle">
+                <div class="mt-3">
+                    <div class="d-flex justify-content-center">
+                        <div class="mx-2">
+                            <a href="https://www.linkedin.com/in/jes%C3%BAs-rosa-bilbao-b34b2ab9/" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="mx-2">
+                            <a href="https://github.com/JesusRosaB" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="mx-2">
+                            <a href="https://orcid.org/0000-0002-4378-5229" class="social-icon" target="_blank"><i class="fab fa-orcid"></i></a>
+                        </div>
+                        <div class="mx-2">
+                            <a href="https://scholar.google.es/citations?user=L40Z3hoAAAAJ" class="social-icon" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="section-title text-center mb-5" data-lang="es">Formación Académica</h2>
+          <h2 class="section-title text-center mb-5 d-none" data-lang="en">Education</h2>
+      
+          <div class="timeline position-relative">
+            <div class="border-start border-2 border-primary position-absolute top-0 start-50 translate-middle-x h-100"></div>
+      
+            <!-- Item -->
+            <div class="row g-0 mb-5">
+              <div class="col-md-6 offset-md-0 text-md-end position-relative">
+                <div class="card shadow-sm border-0 p-4 bg-white me-md-5">
+                  <span class="badge bg-primary mb-2">2020 - 2023</span>
+                  <h5 data-lang="es">Doctorado en Ingeniería Informática</h5>
+                  <h5 data-lang="en" class="d-none">PhD in Computer Science</h5>
+                  <h6 class="text-muted" data-lang="es">Universidad de Cádiz</h6>
+                  <h6 class="text-muted d-none" data-lang="en">University of Cádiz</h6>
+                  <p class="mb-1" data-lang="es">Sobresaliente Cum Laude</p>
+                  <p class="mb-0" data-lang="es">Tesis: Arquitecturas software y herramientas de modelado para la integración del procesamiento de eventos complejos y blockchain</p>
+                  <p class="d-none mb-0" data-lang="en">Thesis: Software architectures and modeling tools for integrating complex event processing and blockchain</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Repetimos estructura alternando lados -->
+            <div class="row g-0 mb-5 justify-content-end">
+              <div class="col-md-6 position-relative">
+                <div class="card shadow-sm border-0 p-4 bg-white ms-md-5">
+                  <span class="badge bg-primary mb-2">2020 - 2021</span>
+                  <h5 data-lang="es">Máster en Big Data y Business Intelligence</h5>
+                  <h5 data-lang="en" class="d-none">Master's in Big Data and Business Intelligence</h5>
+                  <h6 class="text-muted" data-lang="es">ENEB - Escuela de Negocios Europea de Barcelona</h6>
+                  <h6 class="text-muted d-none" data-lang="en">ENEB - European Business School of Barcelona</h6>
+                </div>
+              </div>
+            </div>
+      
+            <div class="row g-0 mb-5">
+              <div class="col-md-6 text-md-end position-relative">
+                <div class="card shadow-sm border-0 p-4 bg-white me-md-5">
+                  <span class="badge bg-primary mb-2">2019 - 2020</span>
+                  <h5 data-lang="es">Máster en Project Management</h5>
+                  <h5 data-lang="en" class="d-none">Master's in Project Management</h5>
+                  <h6 class="text-muted" data-lang="es">ENEB - Escuela de Negocios Europea de Barcelona</h6>
+                  <h6 class="text-muted d-none" data-lang="en">ENEB - European Business School of Barcelona</h6>
+                </div>
+              </div>
+            </div>
+      
+            <div class="row g-0 mb-5 justify-content-end">
+              <div class="col-md-6 position-relative">
+                <div class="card shadow-sm border-0 p-4 bg-white ms-md-5">
+                  <span class="badge bg-primary mb-2">2019 - 2020</span>
+                  <h5 data-lang="es">MBA en Administración y Dirección de Empresas</h5>
+                  <h5 data-lang="en" class="d-none">MBA in Business Administration and Management</h5>
+                  <h6 class="text-muted" data-lang="es">ENEB - Escuela de Negocios Europea de Barcelona</h6>
+                  <h6 class="text-muted d-none" data-lang="en">ENEB - European Business School of Barcelona</h6>
+                </div>
+              </div>
+            </div>
+      
+            <div class="row g-0 mb-5">
+              <div class="col-md-6 text-md-end position-relative">
+                <div class="card shadow-sm border-0 p-4 bg-white me-md-5">
+                  <span class="badge bg-primary mb-2">2019 - 2020</span>
+                  <h5 data-lang="es">Máster en Seguridad Informática (CiberSeguridad)</h5>
+                  <h5 data-lang="en" class="d-none">Master's in Computer Security (Cybersecurity)</h5>
+                  <h6 class="text-muted" data-lang="es">Universidad de Cádiz</h6>
+                  <h6 class="text-muted d-none" data-lang="en">University of Cádiz</h6>
+                </div>
+              </div>
+            </div>
+      
+            <div class="row g-0 mb-0 justify-content-end">
+              <div class="col-md-6 position-relative">
+                <div class="card shadow-sm border-0 p-4 bg-white ms-md-5">
+                  <span class="badge bg-primary mb-2">2014 - 2019</span>
+                  <h5 data-lang="es">Grado en Ingeniería Informática (Ingeniería del Software)</h5>
+                  <h5 data-lang="en" class="d-none">Bachelor's Degree in Computer Engineering (Software Engineering)</h5>
+                  <h6 class="text-muted" data-lang="es">Universidad de Cádiz</h6>
+                  <h6 class="text-muted d-none" data-lang="en">University of Cádiz</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>      
+
+    <!-- Sección Experiencia -->
+    <section id="experience" class="bg-white py-5">
+        <div class="container">
+            <h2 class="section-title" data-lang="es">Mi Experiencia</h2>
+            <h2 class="section-title d-none" data-lang="en">My Experience</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span data-lang="es" class="badge bg-primary mb-2">2023 - Presente</span>
+                            <span data-lang="en" class="badge bg-primary mb-2">2023 - Now</span>
+                            <h3 data-lang="es">Hotta (Therminer)</h3>
+                            <h3 data-lang="en" class="d-none">Hotta (Therminer)</h3>
+                            
+                            <p data-lang="es">Cargo: Director IT</p>
+                            <p data-lang="en" class="d-none">Position: IT Director</p>
+                            
+                            <p data-lang="es">Dirección del departamento de TI, responsable de la estrategia tecnológica y gestión de infraestructuras.</p>
+                            <p data-lang="en" class="d-none">IT department management, responsible for technology strategy and infrastructure management.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span data-lang="es" class="badge bg-primary mb-2">2022 - Presente</span>
+                            <span data-lang="en" class="badge bg-primary mb-2">2022 - Now</span>
+                            <h3 data-lang="es">Universidad de Cádiz</h3>
+                            <h3 data-lang="en" class="d-none">University of Cádiz</h3>
+                            
+                            <p data-lang="es">Cargo: Profesor Sustituto Interino</p>
+                            <p data-lang="en" class="d-none">Position: Assistant Professor</p>
+                            
+                            <p data-lang="es">Docencia especializada en áreas como Virtualización, Bases de datos, Ciberseguridad y Desarrollo de software.</p>
+                            <p data-lang="en" class="d-none">Teaching specialized in areas such as Virtualization, Databases, Cybersecurity, and Software Development.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2022 - 2023</span>
+                            <h3 data-lang="es">Madrid Digital IT</h3>
+                            <h3 data-lang="en" class="d-none">Madrid Digital IT</h3>
+                            
+                            <p data-lang="es">Cargo: Fullstack Developer</p>
+                            <p data-lang="en" class="d-none">Position: Fullstack Developer</p>
+                            
+                            <p data-lang="es">Desarrollador con competencias en .NET Framework, DevOps, GitFlow, Metodologías ágiles y Patrones de diseño. Desempeñando funciones de desarrollo full stack.</p>
+                            <p data-lang="en" class="d-none">Developer with skills in .NET Framework, DevOps, GitFlow, Agile methodologies, and Design patterns. Performing full stack development functions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2020 - 2022</span>
+                            <h3 data-lang="es">Ayuntamiento de Cádiz</h3>
+                            <h3 data-lang="en" class="d-none">Cádiz City Council</h3>
+                            
+                            <p data-lang="es">Cargo: Fullstack Developer (Funcionario Interino)</p>
+                            <p data-lang="en" class="d-none">Position: Fullstack Developer (Interim Civil Servant)</p>
+                            
+                            <p data-lang="es">Desarrollo de aplicaciones utilizando tecnologías como .NET Framework, C# y Oracle Database.</p>
+                            <p data-lang="en" class="d-none">Application development using technologies such as .NET Framework, C#, and Oracle Database.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2020 - 2020</span>
+                            <h3 data-lang="es">Meridianos</h3>
+                            <h3 data-lang="en" class="d-none">Meridianos</h3>
+                            
+                            <p data-lang="es">Cargo: Responsable de IT</p>
+                            <p data-lang="en" class="d-none">Position: IT Manager</p>
+                            
+                            <p data-lang="es">Gestión del departamento de TI.</p>
+                            <p data-lang="en" class="d-none">Management of the IT department.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2020 - 2020</span>
+                            <h3 data-lang="es">Inkor Formación</h3>
+                            <h3 data-lang="en" class="d-none">Inkor Formación</h3>
+                            
+                            <p data-lang="es">Cargo: Formador de TI</p>
+                            <p data-lang="en" class="d-none">Position: IT Trainer</p>
+                            
+                            <p data-lang="es">Impartición de cursos de formación. Cursos impartidos: IFCT032PO - Data Mining Business Intelligence, IFCD013PO - Data Warehouse Business Intelligence, ADGD337PO - Certified Scrum Developer CSD, ADGG102PO – Business Intelligence.</p>
+                            <p data-lang="en" class="d-none">Delivery of training courses. Courses taught: IFCT032PO - Data Mining Business Intelligence, IFCD013PO - Data Warehouse Business Intelligence, ADGD337PO - Certified Scrum Developer CSD, ADGG102PO – Business Intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="skills" class="bg-light py-5">
+        <h2 class="section-title" data-lang="es">Habilidades</h2>
+        <h2 class="section-title d-none" data-lang="en">Skills</h2>
+        
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-code fa-3x"></i></div>
+                        <h3 data-lang="es">Desarrollo Web</h3>
+                        <h3 data-lang="en" class="d-none">Web Development</h3>
+                        <p>.NET Framework, C#, DevOps, GitFlow, Metodologías ágiles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-database fa-3x"></i></div>
+                        <h3 data-lang="es">Bases de Datos</h3>
+                        <h3 data-lang="en" class="d-none">Databases</h3>
+                        <p>Oracle Database, Data Warehouse, Business Intelligence, Data Mining</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-shield-alt fa-3x"></i></div>
+                        <h3 data-lang="es">Ciberseguridad</h3>
+                        <h3 data-lang="en" class="d-none">Cybersecurity</h3>
+                        <p data-lang="es">Protección de datos, gestión de accesos, auditoría de seguridad</p>
+                        <p data-lang="en" class="d-none">Data protection, access management, security auditing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-server fa-3x"></i></div>
+                        <h3 data-lang="es">Virtualización</h3>
+                        <h3 data-lang="en" class="d-none">Virtualization</h3>
+                        <p data-lang="es">Gestión de infraestructuras virtuales, cloud computing</p>
+                        <p data-lang="en" class="d-none">Virtual infrastructure management, cloud computing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-tasks fa-3x"></i></div>
+                        <h3 data-lang="es">Gestión de Proyectos</h3>
+                        <h3 data-lang="en" class="d-none">Project Management</h3>
+                        <p data-lang="es">Scrum, Certified Scrum Developer, Patrones de diseño</p>
+                        <p data-lang="en" class="d-none">Scrum, Certified Scrum Developer, Design patterns</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-chalkboard-teacher fa-3x"></i></div>
+                        <h3 data-lang="es">Formación</h3>
+                        <h3 data-lang="en" class="d-none">Training</h3>
+                        <p data-lang="es">Docencia técnica, desarrollo de currículum, mentoría</p>
+                        <p data-lang="en" class="d-none">Technical teaching, curriculum development, mentoring</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Certificaciones -->
+    <section id="certifications" class="bg-white py-5">
+        <div class="container">
+            <h2 class="section-title mb-4" data-lang="es">Certificaciones</h2>
+            <h2 class="section-title mb-4 d-none" data-lang="en">Certifications</h2>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-certificate text-primary me-3 fa-2x"></i>
+                                <h5 class="card-title mb-0" data-lang="es">Certified Blockchain Expert</h5>
+                                <h5 class="card-title mb-0 d-none" data-lang="en">Certified Blockchain Expert</h5>
+                            </div>
+                            <h6 class="text-muted" data-lang="es">Blockchain Council</h6>
+                            <h6 class="text-muted d-none" data-lang="en">Blockchain Council</h6>
+                            <p class="text-muted" data-lang="es">Expedición: Noviembre 2023</p>
+                            <p class="text-muted d-none" data-lang="en">Issued: November 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-database text-primary me-3 fa-2x"></i>
+                                <h5 class="card-title mb-0" data-lang="es">Redis for .NET Developers</h5>
+                                <h5 class="card-title mb-0 d-none" data-lang="en">Redis for .NET Developers</h5>
+                            </div>
+                            <h6 class="text-muted" data-lang="es">Redis</h6>
+                            <h6 class="text-muted d-none" data-lang="en">Redis</h6>
+                            <p class="text-muted" data-lang="es">Expedición: Junio 2023</p>
+                            <p class="text-muted d-none" data-lang="en">Issued: June 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-brain text-primary me-3 fa-2x"></i>
+                                <h5 class="card-title mb-0" data-lang="es">Diploma de Especialización en Coaching y PNL</h5>
+                                <h5 class="card-title mb-0 d-none" data-lang="en">Diploma in Coaching and NLP Specialization</h5>
+                            </div>
+                            <h6 class="text-muted" data-lang="es">Universidad Isabel I de Castilla</h6>
+                            <h6 class="text-muted d-none" data-lang="en">Isabel I of Castile University</h6>
+                            <p class="text-muted" data-lang="es">Expedición: 2021</p>
+                            <p class="text-muted d-none" data-lang="en">Issued: 2021</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-language text-primary me-3 fa-2x"></i>
+                                <h5 class="card-title mb-0" data-lang="es">Business English Program</h5>
+                                <h5 class="card-title mb-0 d-none" data-lang="en">Business English Program</h5>
+                            </div>
+                            <h6 class="text-muted" data-lang="es">ENEB</h6>
+                            <h6 class="text-muted d-none" data-lang="en">ENEB</h6>
+                            <p class="text-muted" data-lang="es">Expedición: Agosto 2020</p>
+                            <p class="text-muted d-none" data-lang="en">Issued: August 2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-network-wired text-primary me-3 fa-2x"></i>
+                                <h5 class="card-title mb-0" data-lang="es">Cisco Networking Academy CCNA Security V2.0</h5>
+                                <h5 class="card-title mb-0 d-none" data-lang="en">Cisco Networking Academy CCNA Security V2.0</h5>
+                            </div>
+                            <h6 class="text-muted" data-lang="es">Cisco</h6>
+                            <h6 class="text-muted d-none" data-lang="en">Cisco</h6>
+                            <p class="text-muted" data-lang="es">Expedición: Febrero 2020</p>
+                            <p class="text-muted d-none" data-lang="en">Issued: February 2020</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-shield-alt text-primary me-3 fa-2x"></i>
+                                <h5 class="card-title mb-0" data-lang="es">Deloitte Certified Ethical Hacking Associate (D-CEHA)</h5>
+                                <h5 class="card-title mb-0 d-none" data-lang="en">Deloitte Certified Ethical Hacking Associate (D-CEHA)</h5>
+                            </div>
+                            <h6 class="text-muted" data-lang="es">Deloitte</h6>
+                            <h6 class="text-muted d-none" data-lang="en">Deloitte</h6>
+                            <p class="text-muted" data-lang="es">Expedición: Enero 2020</p>
+                            <p class="text-muted d-none" data-lang="en">Issued: January 2020</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-search text-primary me-3 fa-2x"></i>
+                                <h5 class="card-title mb-0" data-lang="es">Deloitte Certified Forensic Investigator Associate (D-CFIA)</h5>
+                                <h5 class="card-title mb-0 d-none" data-lang="en">Deloitte Certified Forensic Investigator Associate (D-CFIA)</h5>
+                            </div>
+                            <h6 class="text-muted" data-lang="es">Deloitte</h6>
+                            <h6 class="text-muted d-none" data-lang="en">Deloitte</h6>
+                            <p class="text-muted" data-lang="es">Expedición: Enero 2020</p>
+                            <p class="text-muted d-none" data-lang="en">Issued: January 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="bg-light py-5">
+        <h2 class="section-title" data-lang="es">Contacto</h2>
+        <h2 class="section-title d-none" data-lang="en">Contact</h2>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form action="https://formspree.io/f/xwplrnqb" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label" data-lang="es">Nombre</label>
+                        <label for="name" class="form-label d-none" data-lang="en">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label" data-lang="es">Email</label>
+                        <label for="email" class="form-label d-none" data-lang="en">Email</label>
+                        <input type="email" class="form-control" id="email" name="_replyto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label" data-lang="es">Mensaje</label>
+                        <label for="message" class="form-label d-none" data-lang="en">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" data-lang="es">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary d-none" data-lang="en">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p data-lang="es">&copy; 2025 Jesús Rosa Bilbao - Todos los derechos reservados</p>
+        <p data-lang="en" class="d-none">&copy; 2025 Jesús Rosa Bilbao - All rights reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Efecto de navegación al hacer scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll suave para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#' && document.querySelector(targetId)) {
+                        document.querySelector(targetId).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        
+                        // Cierra el menú hamburguesa al hacer clic en un enlace (en vista móvil)
+                        const navbarToggler = document.querySelector('.navbar-toggler');
+                        const navbarCollapse = document.querySelector('.navbar-collapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            navbarToggler.click();
+                        }
+                    }
+                }
+            });
+        });
+
+        // Función para cambiar el idioma
+        function changeLanguage(lang) {
+            // Ocultar todos los elementos de todos los idiomas
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                element.classList.add('d-none');
+            });
+            
+            // Mostrar solo los elementos del idioma seleccionado
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(element => {
+                element.classList.remove('d-none');
+            });
+            
+            // Actualizar el texto del selector de idioma
+            document.getElementById('current-lang').textContent = lang.toUpperCase();
+            
+            // Actualizar la bandera - Esta es la línea que faltaba
+            const flagElement = document.getElementById('current-lang-flag');
+            // Primero eliminar todas las clases de bandera existentes
+            flagElement.className = '';
+            // Luego añadir las clases necesarias, con el código de país correcto
+            flagElement.classList.add('flag-icon', `flag-icon-${lang === 'en' ? 'us' : lang}`);
+            
+            // Almacenar la preferencia de idioma en localStorage
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Establecer el idioma basado en la preferencia guardada o usar español por defecto
+        const savedLanguage = localStorage.getItem('preferredLanguage') || 'es';
+        changeLanguage(savedLanguage);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.btn-group.profile-toggle .btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const profileType = this.getAttribute('data-profile');
+                    if (profileType === 'professional') {
+                        window.location.href = 'index.html';
+                    } else if (profileType === 'researcher') {
+                        window.location.href = 'researcher.html';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

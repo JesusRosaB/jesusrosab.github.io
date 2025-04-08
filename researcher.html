@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesús Rosa Bilbao - Investigador</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
+        <div class="container">
+            <!-- Botón hamburguesa para móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                
+                <div class="btn-group profile-toggle ms-auto me-3" role="group" aria-label="Profile selection">
+                    <!-- Botones en español -->
+                    <button class="btn btn-outline-primary" data-profile="professional" data-lang="es">Profesional</button>
+                    <button class="btn btn-outline-primary active" data-profile="researcher" data-lang="es">Investigador</button>
+                    
+                    <!-- Botones en inglés (ocultos inicialmente) -->
+                    <button class="btn btn-outline-primary d-none" data-profile="professional" data-lang="en">Professional</button>
+                    <button class="btn btn-outline-primary active d-none" data-profile="researcher" data-lang="en">Researcher</button>
+                </div>
+
+                <ul class="nav-links navbar-nav ms-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-lang="es">Inicio</a>
+                        <a class="nav-link d-none" href="#home" data-lang="en">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-lang="es">Perfil</a>
+                        <a class="nav-link d-none" href="#about" data-lang="en">Profile</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="researchDropdown" 
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span data-lang="es">Investigación</span>
+                            <span data-lang="en" class="d-none">Research</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="researchDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#research">
+                                    <span data-lang="es">Líneas de Investigación</span>
+                                    <span data-lang="en" class="d-none">Research Lines</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#projects">
+                                    <span data-lang="es">Proyectos de Investigación</span>
+                                    <span data-lang="en" class="d-none">Research Projects</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#researchStays">
+                                    <span data-lang="es">Estancias de Investigación</span>
+                                    <span data-lang="en" class="d-none">Research Stays</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" 
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span data-lang="es">Producción científica</span>
+                            <span data-lang="en" class="d-none">Scientific Production</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#publications">
+                                    <span data-lang="es">Revistas</span>
+                                    <span data-lang="en" class="d-none">Journals</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#conferences">
+                                    <span data-lang="es">Congresos</span>
+                                    <span data-lang="en" class="d-none">Conferences</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#bookChapters">
+                                    <span data-lang="es">Capítulos de Libro</span>
+                                    <span data-lang="en" class="d-none">Book Chapters</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intellectualProperty" data-lang="es">Propiedad Intelectual</a>
+                        <a class="nav-link d-none" href="#intellectualProperty" data-lang="en">Intelectual Property</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#thesisSupervision" data-lang="es">Dirección de Trabajos</a>
+                        <a class="nav-link d-none" href="#thesisSupervision" data-lang="en">Thesis Supervision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-lang="es">Contacto</a>
+                        <a class="nav-link d-none" href="#contact" data-lang="en">Contact</a>
+                    </li>
+
+                    <!-- Selector de idioma -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="current-lang-flag" class="flag-icon flag-icon-es"></span> <span id="current-lang">ES</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="changeLanguage('es')">
+                                    <span class="flag-icon flag-icon-es"></span> Español
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="changeLanguage('en')">
+                                    <span class="flag-icon flag-icon-us"></span> English
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sección Hero -->
+    <section class="hero" id="home">
+        <h1 data-lang="es">Jesús Rosa Bilbao</h1>
+        <h1 data-lang="en" class="d-none">Jesús Rosa Bilbao</h1>
+        
+        <p data-lang="es">Profesor Sustituto Interino | Blockchain | Procesamiento de Eventos Complejos | IoT</p>
+        <p data-lang="en" class="d-none">Assistant Professor | Blockchain | Complex Event Processing | IoT</p>
+        
+        <a href="#contact" class="btn btn-primary" data-lang="es">Contáctame</a>
+        <a href="#contact" class="btn btn-primary d-none" data-lang="en">Contact Me</a>
+    </section>
+
+    <!-- Sección Perfil -->
+    <section id="about" class="container">
+        <h2 class="section-title" data-lang="es">Perfil Investigador</h2>
+        <h2 class="section-title d-none" data-lang="en">Research Profile</h2>
+        
+        <div class="row">
+            <div class="col-lg-8">
+                <div data-lang="es">
+                    <p>Doctor Internacional en Ingeniería Informática con calificación Sobresaliente Cum Laude por la Universidad de Cádiz (2023), especializado en arquitecturas software para la integración de Procesamiento de Eventos Complejos y Blockchain. Actualmente Director de TI en Therminer desde diciembre de 2023 y Profesor Sustituto Interino en la Universidad de Cádiz.</p>
+                    
+                    <p>Mi trayectoria profesional incluye roles como Full Stack Developer en Madrid-Digital IT (2023), Programador Informático en el Centro Municipal de Informática del Ayuntamiento de Cádiz (2020) y experiencia docente universitaria desde 2022. Cuento con formación complementaria en Seguridad Informática, Gestión de Proyectos, Administración y Dirección de Empresas, y Big Data & Business Intelligence.</p>
+                    
+                    <p>Mi investigación se centra en blockchain, procesamiento de eventos complejos, Internet de las Cosas (IoT), dispositivos ligeros, contenerización, plataformas de bajo código y su aplicación a la industria 4.0, ciudades inteligentes y ciberseguridad. He publicado en revistas indexadas JCR Q1 y conferencias internacionales, participando en colaboraciones con investigadores de Austria y Noruega.</p>
+                    
+                    <p>Miembro del grupo de investigación UCASE de Ingeniería del Software de la UCA, de la Sociedad de Ingeniería de Software y Tecnologías de Desarrollo Software (SISTEDES) y de la Sociedad Científica Informática de España (SCIE). Participo en 6 proyectos de investigación financiados y en un contrato de transferencia tecnológica con Navantia S.A. por 544.500 €.</p>
+                </div>
+                <div data-lang="en" class="d-none">
+                    <p>International PhD in Computer Engineering with Cum Laude distinction from the University of Cádiz (2023), specialized in software architectures for integrating Complex Event Processing and Blockchain. Currently IT Director at Therminer since December 2023 and Assistant Professor at the University of Cádiz.</p>
+                    
+                    <p>My professional background includes roles as Full Stack Developer at Madrid-Digital IT (2023), Computer Programmer at the Municipal Computing Center of Cádiz City Council (2020), and university teaching experience since 2022. I hold additional qualifications in Computer Security, Project Management, Business Administration, and Big Data & Business Intelligence.</p>
+                    
+                    <p>My research focuses on blockchain, complex event processing, Internet of Things (IoT), lightweight devices, containerization, low-code platforms, and their application to Industry 4.0, smart cities, and cybersecurity. I have published in JCR Q1 indexed journals and international conferences, collaborating with researchers from Austria and Norway.</p>
+                    
+                    <p>Member of the UCASE Software Engineering research group at UCA, the Society of Software Engineering and Software Development Technologies (SISTEDES), and the Spanish Computer Science Society (SCIE). I participate in 6 funded research projects and a technological transfer contract with Navantia S.A. worth €544,500.</p>
+                </div>
+            </div>
+            <div class="profile-img col-lg-4 text-center">
+                <img src="img/profile.png" alt="Foto de perfil" class="img-fluid rounded-circle">
+                <div class="mt-3">
+                    <div class="d-flex justify-content-center">
+                        <div class="mx-2">
+                            <a href="https://www.linkedin.com/in/jesús-rosa-bilbao-b34b2ab9/" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="mx-2">
+                            <a href="https://github.com/JesusRosaB" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="mx-2">
+                            <a href="https://orcid.org/0000-0002-4378-5229" class="social-icon" target="_blank"><i class="fab fa-orcid"></i></a>
+                        </div>
+                        <div class="mx-2">
+                            <a href="https://scholar.google.es/citations?user=L40Z3hoAAAAJ" class="social-icon" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Líneas de Investigación -->
+    <section id="research" class="container">
+        <h2 class="section-title" data-lang="es">Líneas de Investigación</h2>
+        <h2 class="section-title d-none" data-lang="en">Research Lines</h2>
+        
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-link fa-3x"></i></div>
+                        <h3 data-lang="es">Blockchain</h3>
+                        <h3 data-lang="en" class="d-none">Blockchain</h3>
+                        <p data-lang="es">Integración de blockchain con otras tecnologías, gestión de contratos inteligentes, aplicaciones descentralizadas y detección de anomalías en redes blockchain.</p>
+                        <p data-lang="en" class="d-none">Integration of blockchain with other technologies, smart contract management, decentralized applications, and anomaly detection in blockchain networks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-stream fa-3x"></i></div>
+                        <h3 data-lang="es">Procesamiento de Eventos Complejos</h3>
+                        <h3 data-lang="en" class="d-none">Complex Event Processing</h3>
+                        <p data-lang="es">Arquitecturas orientadas a servicios y dirigidas por eventos, ingeniería dirigida por modelos aplicada al procesamiento de eventos complejos.</p>
+                        <p data-lang="en" class="d-none">Service-oriented and event-driven architectures, model-driven engineering applied to complex event processing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-network-wired fa-3x"></i></div>
+                        <h3 data-lang="es">Internet de las Cosas (IoT)</h3>
+                        <h3 data-lang="en" class="d-none">Internet of Things (IoT)</h3>
+                        <p data-lang="es">Aplicaciones de IoT en entornos educativos, industria 4.0, ciudades inteligentes y monitorización de la calidad del aire.</p>
+                        <p data-lang="en" class="d-none">IoT applications in educational environments, Industry 4.0, smart cities, and air quality monitoring.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-code fa-3x"></i></div>
+                        <h3 data-lang="es">Plataformas de Bajo Código</h3>
+                        <h3 data-lang="en" class="d-none">Low-Code Platforms</h3>
+                        <p data-lang="es">Desarrollo de herramientas de bajo código para facilitar la integración de tecnologías complejas como blockchain y procesamiento de eventos.</p>
+                        <p data-lang="en" class="d-none">Development of low-code tools to facilitate the integration of complex technologies such as blockchain and event processing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-shield-alt fa-3x"></i></div>
+                        <h3 data-lang="es">Ciberseguridad</h3>
+                        <h3 data-lang="en" class="d-none">Cybersecurity</h3>
+                        <p data-lang="es">Detección de anomalías en redes blockchain, seguridad en IoT y entornos distribuidos, y auditoría de sistemas.</p>
+                        <p data-lang="en" class="d-none">Anomaly detection in blockchain networks, security in IoT and distributed environments, and system auditing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <div class="mb-3"><i class="fas fa-industry fa-3x"></i></div>
+                        <h3 data-lang="es">Industria 4.0 y Ciudades Inteligentes</h3>
+                        <h3 data-lang="en" class="d-none">Industry 4.0 and Smart Cities</h3>
+                        <p data-lang="es">Aplicación de tecnologías blockchain, IoT y procesamiento de eventos complejos en entornos industriales y urbanos inteligentes.</p>
+                        <p data-lang="en" class="d-none">Application of blockchain technologies, IoT, and complex event processing in smart industrial and urban environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects" class="bg-light">
+        <div class="container">
+            <h2 class="section-title" data-lang="es">Proyectos de Investigación</h2>
+            <h2 class="section-title d-none" data-lang="en">Research Projects</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2022-2024</span>
+                            <h3 data-lang="es">ASSENTER: Aplicación de técnicas avanzadas de procesamiento de datos y prueba en la industria</h3>
+                            <h3 data-lang="en" class="d-none">ASSENTER: Application of advanced data processing and testing techniques in industry</h3>
+                            
+                            <p data-lang="es">Proyecto centrado en el desarrollo y aplicación de técnicas avanzadas de procesamiento de datos y pruebas en entornos industriales, en colaboración con empresas como GEN S.A. y Navantia S.A.</p>
+                            <p data-lang="en" class="d-none">Project focused on developing and applying advanced data processing and testing techniques in industrial environments, in collaboration with companies like GEN S.A. and Navantia S.A.</p>
+                            
+                            <p data-lang="es"><strong>Rol:</strong> Investigador</p>
+                            <p data-lang="en" class="d-none"><strong>Role:</strong> Researcher</p>
+                            
+                            <p data-lang="es"><strong>Entidad financiadora:</strong> Ministerio de Ciencia e Innovación</p>
+                            <p data-lang="en" class="d-none"><strong>Funding entity:</strong> Ministry of Science and Innovation</p>
+                            
+                            <p data-lang="es"><strong>Referencia:</strong> PDC2022-133522-I00</p>
+                            <p data-lang="en" class="d-none"><strong>Reference:</strong> PDC2022-133522-I00</p>
+                            
+                            <p data-lang="es"><strong>Cuantía:</strong> 74.778 €</p>
+                            <p data-lang="en" class="d-none"><strong>Amount:</strong> 74,778 €</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2022-2026</span>
+                            <h3 data-lang="es">AwESOMe: Metodologías avanzadas para arquitecturas, diseño y prueba de sistemas software</h3>
+                            <h3 data-lang="en" class="d-none">AwESOMe: Advanced methodologies for architectures, design and testing of software systems</h3>
+                            
+                            <p data-lang="es">Proyecto de investigación sobre metodologías avanzadas para el desarrollo y prueba de sistemas software, con énfasis en arquitecturas modernas y técnicas de verificación. En colaboración con UCM y UCLM.</p>
+                            <p data-lang="en" class="d-none">Research project on advanced methodologies for the development and testing of software systems, with emphasis on modern architectures and verification techniques. In collaboration with UCM and UCLM.</p>
+                            
+                            <p data-lang="es"><strong>Rol:</strong> Investigador</p>
+                            <p data-lang="en" class="d-none"><strong>Role:</strong> Researcher</p>
+                            
+                            <p data-lang="es"><strong>Entidad financiadora:</strong> Ministerio de Ciencia e Innovación</p>
+                            <p data-lang="en" class="d-none"><strong>Funding entity:</strong> Ministry of Science and Innovation</p>
+                            
+                            <p data-lang="es"><strong>Referencia:</strong> PID2021-122215NB-C33</p>
+                            <p data-lang="en" class="d-none"><strong>Reference:</strong> PID2021-122215NB-C33</p>
+                            
+                            <p data-lang="es"><strong>Cuantía:</strong> 167.827 €</p>
+                            <p data-lang="en" class="d-none"><strong>Amount:</strong> 167,827 €</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2023-2026</span>
+                            <h3 data-lang="es">SEADETEC: Servicio avanzado de detección temprana de eventos de ciberseguridad</h3>
+                            <h3 data-lang="en" class="d-none">SEADETEC: Advanced service for early detection of cybersecurity events</h3>
+                            
+                            <p data-lang="es">Contrato de transferencia tecnológica para el desarrollo de un servicio avanzado de detección temprana de eventos de ciberseguridad, aplicando tecnologías de procesamiento de eventos complejos.</p>
+                            <p data-lang="en" class="d-none">Technology transfer contract for the development of an advanced service for early detection of cybersecurity events, applying complex event processing technologies.</p>
+                            
+                            <p data-lang="es"><strong>Rol:</strong> Participante</p>
+                            <p data-lang="en" class="d-none"><strong>Role:</strong> Participant</p>
+                            
+                            <p data-lang="es"><strong>Entidad financiadora:</strong> Navantia S.A.</p>
+                            <p data-lang="en" class="d-none"><strong>Funding entity:</strong> Navantia S.A.</p>
+                            
+                            <p data-lang="es"><strong>Referencia:</strong> OT2023/097</p>
+                            <p data-lang="en" class="d-none"><strong>Reference:</strong> OT2023/097</p>
+                            
+                            <p data-lang="es"><strong>Cuantía:</strong> 544.500 €</p>
+                            <p data-lang="en" class="d-none"><strong>Amount:</strong> 544,500 €</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2021-2023</span>
+                            <h3 data-lang="es">DECISION: Plataforma de modelado gráfico, simulación, monitorización y gestión inteligente de redes de abastecimiento de agua</h3>
+                            <h3 data-lang="en" class="d-none">DECISION: Platform for graphic modeling, simulation, monitoring and intelligent management of water supply networks</h3>
+                            
+                            <p data-lang="es">Desarrollo de una plataforma para el modelado, simulación, monitorización y gestión inteligente de redes de abastecimiento de agua, utilizando técnicas avanzadas de procesamiento de datos. En colaboración con GEN S.A.</p>
+                            <p data-lang="en" class="d-none">Development of a platform for modeling, simulation, monitoring, and intelligent management of water supply networks, using advanced data processing techniques. In collaboration with GEN S.A.</p>
+                            
+                            <p data-lang="es"><strong>Rol:</strong> Colaborador</p>
+                            <p data-lang="en" class="d-none"><strong>Role:</strong> Collaborator</p>
+                            
+                            <p data-lang="es"><strong>Entidad financiadora:</strong> Agencia Andaluza del Conocimiento, Junta de Andalucía</p>
+                            <p data-lang="en" class="d-none"><strong>Funding entity:</strong> Andalusian Knowledge Agency, Junta de Andalucía</p>
+                            
+                            <p data-lang="es"><strong>Referencia:</strong> P20_00865</p>
+                            <p data-lang="en" class="d-none"><strong>Reference:</strong> P20_00865</p>
+                            
+                            <p data-lang="es"><strong>Cuantía:</strong> 94.750 €</p>
+                            <p data-lang="en" class="d-none"><strong>Amount:</strong> 94,750 €</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2022-2023</span>
+                            <h3 data-lang="es">iPREDICE: Investigación de una plataforma inteligente de mantenimiento predictivo de infraestructuras-Fase II</h3>
+                            <h3 data-lang="en" class="d-none">iPREDICE: Research on an intelligent platform for predictive maintenance of infrastructures-Phase II</h3>
+                            
+                            <p data-lang="es">Proyecto de investigación para el desarrollo de una plataforma inteligente de mantenimiento predictivo de infraestructuras.</p>
+                            <p data-lang="en" class="d-none">Research project for the development of an intelligent platform for predictive maintenance of infrastructures.</p>
+                            
+                            <p data-lang="es"><strong>Rol:</strong> Investigador</p>
+                            <p data-lang="en" class="d-none"><strong>Role:</strong> Researcher</p>
+                            
+                            <p data-lang="es"><strong>Entidad financiadora:</strong> Ministerio de Industria, Comercio y Turismo</p>
+                            <p data-lang="en" class="d-none"><strong>Funding entity:</strong> Ministry of Industry, Commerce and Tourism</p>
+                            
+                            <p data-lang="es"><strong>Referencia:</strong> AGRUP.EMP.INNOV-MINCOTUR-2022</p>
+                            <p data-lang="en" class="d-none"><strong>Reference:</strong> AGRUP.EMP.INNOV-MINCOTUR-2022</p>
+                            
+                            <p data-lang="es"><strong>Cuantía:</strong> 68.341 €</p>
+                            <p data-lang="en" class="d-none"><strong>Amount:</strong> 68,341 €</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2021-2022</span>
+                            <h3 data-lang="es">GANGES: Procesamiento de big data en tiempo real para la gestión inteligente de redes de abastecimiento de agua</h3>
+                            <h3 data-lang="en" class="d-none">GANGES: Real-time big data processing for intelligent management of water supply networks</h3>
+                            
+                            <p data-lang="es">Proyecto para el procesamiento de grandes volúmenes de datos en tiempo real aplicado a la gestión inteligente de redes de abastecimiento de agua. En colaboración con GEN S.A.</p>
+                            <p data-lang="en" class="d-none">Project for processing large volumes of data in real time applied to the intelligent management of water supply networks. In collaboration with GEN S.A.</p>
+                            
+                            <p data-lang="es"><strong>Rol:</strong> Investigador</p>
+                            <p data-lang="en" class="d-none"><strong>Role:</strong> Researcher</p>
+                            
+                            <p data-lang="es"><strong>Entidad financiadora:</strong> Universidad de Cádiz y la empresa GEN S.A.</p>
+                            <p data-lang="en" class="d-none"><strong>Funding entity:</strong> University of Cádiz and GEN S.A.</p>
+                            
+                            <p data-lang="es"><strong>Referencia:</strong> IRTP03_UCA</p>
+                            <p data-lang="en" class="d-none"><strong>Reference:</strong> IRTP03_UCA</p>
+                            
+                            <p data-lang="es"><strong>Cuantía:</strong> 17.250 €</p>
+                            <p data-lang="en" class="d-none"><strong>Amount:</strong> 17,250 €</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2019-2021</span>
+                            <h3 data-lang="es">Procesamiento de big data en tiempo real para la gestión inteligente de la calidad del aire en puertos marítimos</h3>
+                            <h3 data-lang="en" class="d-none">Real-time big data processing for intelligent management of air quality in maritime ports</h3>
+                            
+                            <p data-lang="es">Proyecto de investigación para el procesamiento de datos en tiempo real aplicado a la gestión de la calidad del aire en puertos marítimos. En colaboración con UAL.</p>
+                            <p data-lang="en" class="d-none">Research project for real-time data processing applied to air quality management in maritime ports. In collaboration with UAL.</p>
+                            
+                            <p data-lang="es"><strong>Rol:</strong> Investigador</p>
+                            <p data-lang="en" class="d-none"><strong>Role:</strong> Researcher</p>
+                            
+                            <p data-lang="es"><strong>Entidad financiadora:</strong> CEIMAR (Campus de Excelencia Internacional del Mar)</p>
+                            <p data-lang="en" class="d-none"><strong>Funding entity:</strong> CEIMAR (International Campus of Excellence of the Sea)</p>
+                            
+                            <p data-lang="es"><strong>Referencia:</strong> CEIJ19-C01.1</p>
+                            <p data-lang="en" class="d-none"><strong>Reference:</strong> CEIJ19-C01.1</p>
+                            
+                            <p data-lang="es"><strong>Cuantía:</strong> 4.000 €</p>
+                            <p data-lang="en" class="d-none"><strong>Amount:</strong> 4,000 €</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Estancias de Investigación -->
+    <section id="researchStays" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-lang="es">Estancias de Investigación</h2>
+            <h2 class="section-title text-center mb-5 d-none" data-lang="en">Research Stays</h2>
+            
+            <div class="row">
+                <!-- Estancia 1: Sevilla 2025 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-geo-alt-fill text-primary me-2 fs-4"></i>
+                                <h4 class="card-title mb-0" data-lang="es">Universidad de Sevilla</h4>
+                                <h4 class="card-title mb-0 d-none" data-lang="en">University of Seville</h4>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2">2025</span>
+                                <span class="text-muted" data-lang="es">Enero - Febrero</span>
+                                <span class="text-muted d-none" data-lang="en">January - February</span>
+                            </div>
+                            
+                            <p data-lang="es"><strong>Supervisor:</strong> Prof. Dr. Antonia María Reina Quintero</p>
+                            <p data-lang="en" class="d-none"><strong>Supervisor:</strong> Prof. Dr. Antonia María Reina Quintero</p>
+                            
+                            <p data-lang="es"><strong>Departamento:</strong> Data-centric Computing Research Hub, Departamento de Lenguajes y Sistemas Informáticos</p>
+                            <p data-lang="en" class="d-none"><strong>Department:</strong> Data-centric Computing Research Hub, Department of Languages and Computer Systems</p>
+                            
+                            <p data-lang="es"><strong>Periodo:</strong> Del 09/01/2025 al 19/02/2025</p>
+                            <p data-lang="en" class="d-none"><strong>Period:</strong> From 01/09/2025 to 02/19/2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Estancia 2: Sevilla 2024 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-geo-alt-fill text-primary me-2 fs-4"></i>
+                                <h4 class="card-title mb-0" data-lang="es">Universidad de Sevilla</h4>
+                                <h4 class="card-title mb-0 d-none" data-lang="en">University of Seville</h4>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2">2024</span>
+                                <span class="text-muted" data-lang="es">Septiembre - Octubre</span>
+                                <span class="text-muted d-none" data-lang="en">September - October</span>
+                            </div>
+                            
+                            <p data-lang="es"><strong>Supervisor:</strong> Prof. Dr. Antonia María Reina Quintero</p>
+                            <p data-lang="en" class="d-none"><strong>Supervisor:</strong> Prof. Dr. Antonia María Reina Quintero</p>
+                            
+                            <p data-lang="es"><strong>Departamento:</strong> Data-centric Computing Research Hub, Departamento de Lenguajes y Sistemas Informáticos</p>
+                            <p data-lang="en" class="d-none"><strong>Department:</strong> Data-centric Computing Research Hub, Department of Languages and Computer Systems</p>
+                            
+                            <p data-lang="es"><strong>Periodo:</strong> Del 02/09/2024 al 16/10/2024</p>
+                            <p data-lang="en" class="d-none"><strong>Period:</strong> From 09/02/2024 to 10/16/2024</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Estancia 3: Frankfurt 2023 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-geo-alt-fill text-primary me-2 fs-4"></i>
+                                <h4 class="card-title mb-0" data-lang="es">Frankfurt University of Applied Sciences</h4>
+                                <h4 class="card-title mb-0 d-none" data-lang="en">Frankfurt University of Applied Sciences</h4>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2">2023</span>
+                                <span class="text-muted" data-lang="es">Mayo - Julio</span>
+                                <span class="text-muted d-none" data-lang="en">May - July</span>
+                            </div>
+                            
+                            <p data-lang="es"><strong>Supervisor:</strong> Prof. Dr. Matthias Wagner</p>
+                            <p data-lang="en" class="d-none"><strong>Supervisor:</strong> Prof. Dr. Matthias Wagner</p>
+                            
+                            <p data-lang="es"><strong>Departamento:</strong> Faculty of Computer Science and Engineering, Director of High Integrity Systems Study Programme</p>
+                            <p data-lang="en" class="d-none"><strong>Department:</strong> Faculty of Computer Science and Engineering, Director of High Integrity Systems Study Programme</p>
+                            
+                            <p data-lang="es"><strong>Periodo:</strong> Del 25/05/2023 al 24/07/2023</p>
+                            <p data-lang="en" class="d-none"><strong>Period:</strong> From 05/25/2023 to 07/24/2023</p>
+                            
+                            <p data-lang="es"><strong>Ubicación:</strong> Frankfurt am Main, Alemania</p>
+                            <p data-lang="en" class="d-none"><strong>Location:</strong> Frankfurt am Main, Germany</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Estancia 4: Bergen 2023 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-geo-alt-fill text-primary me-2 fs-4"></i>
+                                <h4 class="card-title mb-0" data-lang="es">Western Norway University of Applied Sciences</h4>
+                                <h4 class="card-title mb-0 d-none" data-lang="en">Western Norway University of Applied Sciences</h4>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-2">2023</span>
+                                <span class="text-muted" data-lang="es">Enero - Febrero</span>
+                                <span class="text-muted d-none" data-lang="en">January - February</span>
+                            </div>
+                            
+                            <p data-lang="es"><strong>Supervisor:</strong> Prof. Dr. Adrian Rutle</p>
+                            <p data-lang="en" class="d-none"><strong>Supervisor:</strong> Prof. Dr. Adrian Rutle</p>
+                            
+                            <p data-lang="es"><strong>Departamento:</strong> Department of Computing, Mathematics and Physics</p>
+                            <p data-lang="en" class="d-none"><strong>Department:</strong> Department of Computing, Mathematics and Physics</p>
+                            
+                            <p data-lang="es"><strong>Periodo:</strong> Del 13/01/2023 al 12/02/2023</p>
+                            <p data-lang="en" class="d-none"><strong>Period:</strong> From 01/13/2023 to 02/12/2023</p>
+                            
+                            <p data-lang="es"><strong>Ubicación:</strong> Bergen, Noruega</p>
+                            <p data-lang="en" class="d-none"><strong>Location:</strong> Bergen, Norway</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Publicaciones -->
+    <section id="publications" class="bg-light">
+        <div class="container">
+            <h2 class="section-title" data-lang="es">Publicaciones Científicas</h2>
+            <h2 class="section-title d-none" data-lang="en">Scientific Publications</h2>
+            
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2025</span>
+                            <h3>IoT-Based Indoor Air Quality Management System for Intelligent Education Environments</h3>
+                            <p><strong>Autores:</strong> Rosa-Bilbao, J., Sajid Butt, F., Merkl, D., Wagner, M. F., Schäfer, J., Boubeta-Puig, J.</p>
+                            <p><strong>Revista:</strong> IEEE Internet of Things (JCR IF 2023: 8.2, Q1)</p>
+                            <p data-lang="es">Sistema de gestión de calidad del aire interior basado en IoT para entornos educativos inteligentes, utilizando procesamiento de eventos complejos para la detección automática de anomalías.</p>
+                            <p data-lang="en" class="d-none">IoT-based indoor air quality management system for intelligent education environments, using complex event processing for automatic anomaly detection.</p>
+                            <a href="https://doi.org/10.1109/JIOT.2025.3539886" class="btn btn-outline-primary" target="_blank">Ver publicación <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2025</span>
+                            <h3>Leveraging complex event processing for monitoring and automatically detecting anomalies in Ethereum-based blockchain networks</h3>
+                            <p><strong>Autores:</strong> Rosa-Bilbao, J., Boubeta-Puig, J., Lagares-Galán, J., Vella, M.</p>
+                            <p><strong>Revista:</strong> Computer Standards & Interfaces (JCR IF 2023: 4.1, Q1)</p>
+                            <p data-lang="es">Investigación sobre la aplicación del procesamiento de eventos complejos para la monitorización y detección automática de anomalías en redes blockchain basadas en Ethereum.</p>
+                            <p data-lang="en" class="d-none">Research on applying complex event processing for monitoring and automatically detecting anomalies in Ethereum-based blockchain networks.</p>
+                            <a href="https://doi.org/10.1016/j.csi.2024.103882" class="btn btn-outline-primary" target="_blank">Ver publicación <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2023</span>
+                            <h3>CEPEDALoCo: An event-driven architecture for integrating complex event processing and blockchain through low-code</h3>
+                            <p><strong>Autores:</strong> Rosa-Bilbao, J., Boubeta-Puig, J., Rutle, A.</p>
+                            <p><strong>Revista:</strong> Internet of Things (JCR IF 2023: 6.0, Q1)</p>
+                            <p data-lang="es">Una arquitectura dirigida por eventos para integrar el procesamiento de eventos complejos y blockchain a través de soluciones de bajo código.</p>
+                            <p data-lang="en" class="d-none">An event-driven architecture for integrating complex event processing and blockchain through low-code solutions.</p>
+                            <a href="https://doi.org/10.1016/j.iot.2023.100802" class="btn btn-outline-primary" target="_blank">Ver publicación <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2023</span>
+                            <h3>EDALoCo: Enhancing the accessibility of blockchains through a low-code approach to the development of event-driven applications for smart contract management</h3>
+                            <p><strong>Autores:</strong> Rosa-Bilbao, J., Boubeta-Puig, J., Rutle, A.</p>
+                            <p><strong>Revista:</strong> Computer Standards & Interfaces (JCR IF 2023: 4.1, Q1)</p>
+                            <p data-lang="es">Enfoque de bajo código para mejorar la accesibilidad de blockchains mediante el desarrollo de aplicaciones dirigidas por eventos para gestión de contratos inteligentes.</p>
+                            <p data-lang="en" class="d-none">Low-code approach to enhance the accessibility of blockchains through the development of event-driven applications for smart contract management.</p>
+                            <a href="https://doi.org/10.1016/j.csi.2022.103676" class="btn btn-outline-primary" target="_blank">Ver publicación <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">2021</span>
+                            <h3>CEPchain: A graphical model-driven solution for integrating complex event processing and blockchain</h3>
+                            <p><strong>Autores:</strong> Boubeta-Puig, J., Rosa-Bilbao, J., Mendling, J.</p>
+                            <p><strong>Revista:</strong> Expert Systems with Applications (JCR IF 2021: 8.665, Q1)</p>
+                            <p data-lang="es">Solución basada en modelado gráfico para la integración del procesamiento de eventos complejos y blockchain, facilitando el desarrollo de aplicaciones en este campo.</p>
+                            <p data-lang="en" class="d-none">Graphical model-driven solution for integrating complex event processing and blockchain, facilitating application development in this field.</p>
+                            <a href="https://doi.org/10.1016/j.eswa.2021.115578" class="btn btn-outline-primary" target="_blank">Ver publicación <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Congresos -->
+    <section id="conferences" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-lang="es">Congresos</h2>
+            <h2 class="section-title text-center mb-5 d-none" data-lang="en">Conferences</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="accordionConferences">
+                        <!-- Conferencia 1 -->
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#conf1" aria-expanded="true" aria-controls="conf1">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2025</span>
+                                        <span data-lang="es">ICTIS 2025 - DAPI-Py: Sistema de Gestión de Identidad Digital Descentralizada</span>
+                                        <span data-lang="en" class="d-none">ICTIS 2025 - DAPI-Py: Decentralized Digital Identity Management System</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf1" class="accordion-collapse collapse show" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> DAPI-Py: A Decentralized Digital Identity Management System Leveraging Blockchain and Edge Computing</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> DAPI-Py: A Decentralized Digital Identity Management System Leveraging Blockchain and Edge Computing</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> Ninth International Conference on Information and Communication Technology for Intelligent Systems (ICTIS 2025)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> Ninth International Conference on Information and Communication Technology for Intelligent Systems (ICTIS 2025)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Bangkok, Tailandia</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Bangkok, Thailand</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Abril 2025</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> April 2025</p>
+                                    
+                                    <p data-lang="es"><strong>Páginas:</strong> 1-10</p>
+                                    <p data-lang="en" class="d-none"><strong>Pages:</strong> 1-10</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conferencia 2 -->
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf2" aria-expanded="false" aria-controls="conf2">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2024</span>
+                                        <span data-lang="es">DESEi+d 2024 - Detección de anomalías en entornos OT navales</span>
+                                        <span data-lang="en" class="d-none">DESEi+d 2024 - Anomaly detection in naval OT environments</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf2" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Un nuevo enfoque tecnológico para la detección de anomalías en entornos OT navales</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> A new technological approach for anomaly detection in naval OT environments</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. J. Domínguez-Jiménez, R. Gómez Sánchez, I. Medina-Bulo, J. Boubeta-Puig, M. Rodríguez-García, A. Muñoz-Ortega, S. Balderas-Díaz, G. Guerrero-Contreras, E. L. Silva Ramírez, P. Luna-Ramos, J. J. Carretero Henares, A. J. Molina-Cabrera, G. Fuentes Landi, P. Torres Gómez, J. Rosa-Bilbao</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. J. Domínguez-Jiménez, R. Gómez Sánchez, I. Medina-Bulo, J. Boubeta-Puig, M. Rodríguez-García, A. Muñoz-Ortega, S. Balderas-Díaz, G. Guerrero-Contreras, E. L. Silva Ramírez, P. Luna-Ramos, J. J. Carretero Henares, A. J. Molina-Cabrera, G. Fuentes Landi, P. Torres Gómez, J. Rosa-Bilbao</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> XI Congreso Nacional de I+D en Defensa y Seguridad (DESEi+d 2024)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> XI National Congress of R&D in Defense and Security (DESEi+d 2024)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Jaén, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Jaén, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Noviembre 2024</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> November 2024</p>
+                                    
+                                    <p data-lang="es"><strong>Páginas:</strong> 1-6</p>
+                                    <p data-lang="en" class="d-none"><strong>Pages:</strong> 1-6</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conferencia 3 -->
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf3" aria-expanded="false" aria-controls="conf3">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2024</span>
+                                        <span data-lang="es">ICERI 2024 - Recursos de autoevaluación interactivos</span>
+                                        <span data-lang="en" class="d-none">ICERI 2024 - Interactive self-assessment resources</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf3" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Developing interactive self-assessment resources compatible with mobile devices for Bachelor's and Master's degree courses</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> Developing interactive self-assessment resources compatible with mobile devices for Bachelor's and Master's degree courses</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Boubeta-Puig, K. J. Valle-Gómez, J. Rosa-Bilbao</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Boubeta-Puig, K. J. Valle-Gómez, J. Rosa-Bilbao</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> 17th International Conference on Education, Research and Innovation (ICERI 2024)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> 17th International Conference on Education, Research and Innovation (ICERI 2024)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Sevilla, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Seville, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Noviembre 2024</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> November 2024</p>
+                                    
+                                    <p data-lang="es"><strong>Páginas:</strong> 4689-4697</p>
+                                    <p data-lang="en" class="d-none"><strong>Pages:</strong> 4689-4697</p>
+                                    
+                                    <p data-lang="es"><strong>DOI:</strong> 10.21125/iceri.2024.1157</p>
+                                    <p data-lang="en" class="d-none"><strong>DOI:</strong> 10.21125/iceri.2024.1157</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conferencia 4 -->
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf4" aria-expanded="false" aria-controls="conf4">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2023</span>
+                                        <span data-lang="es">ICERI 2023 - Gamificación en procesos de enseñanza-aprendizaje</span>
+                                        <span data-lang="en" class="d-none">ICERI 2023 - Gamifying teaching-learning processes</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf4" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Gamifying teaching-learning processes: A study on security in computer systems, security in distributed systems, and risk analysis and management courses</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> Gamifying teaching-learning processes: A study on security in computer systems, security in distributed systems, and risk analysis and management courses</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Boubeta-Puig, K. J. Valle-Gómez, J. Rosa-Bilbao, A. Muñoz, G. Ortiz</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Boubeta-Puig, K. J. Valle-Gómez, J. Rosa-Bilbao, A. Muñoz, G. Ortiz</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> 16th annual International Conference of Education, Research and Innovation (ICERI2023)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> 16th annual International Conference of Education, Research and Innovation (ICERI2023)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Sevilla, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Seville, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Noviembre 2023</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> November 2023</p>
+                                    
+                                    <p data-lang="es"><strong>Páginas:</strong> 8975-8982</p>
+                                    <p data-lang="en" class="d-none"><strong>Pages:</strong> 8975-8982</p>
+                                    
+                                    <p data-lang="es"><strong>DOI:</strong> 10.21125/iceri.2023.2292</p>
+                                    <p data-lang="en" class="d-none"><strong>DOI:</strong> 10.21125/iceri.2023.2292</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conferencia 5 -->
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf5" aria-expanded="false" aria-controls="conf5">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2023</span>
+                                        <span data-lang="es">JIPII 2023 - Gestión de Contratos Inteligentes en varias Redes Blockchain</span>
+                                        <span data-lang="en" class="d-none">JIPII 2023 - Smart Contract Management across Multiple Blockchain Networks</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf5" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Hacia la Gestión de Contratos Inteligentes en varias Redes Blockchain</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> Towards Smart Contract Management across Multiple Blockchain Networks</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> Third Doctoral Consortium in Computer Science (JIPII 2023)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> Third Doctoral Consortium in Computer Science (JIPII 2023)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Cádiz, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Cádiz, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Junio 2023</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> June 2023</p>
+                                    
+                                    <p data-lang="es"><strong>Handle:</strong> 10498/29050</p>
+                                    <p data-lang="en" class="d-none"><strong>Handle:</strong> 10498/29050</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conferencia 6 -->
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf6" aria-expanded="false" aria-controls="conf6">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2023</span>
+                                        <span data-lang="es">ALLDATA 2023 - Procesamiento de datos en tiempo real</span>
+                                        <span data-lang="en" class="d-none">ALLDATA 2023 - Real-Time Data Processing</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf6" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Seeking Higher Performance en Real-Time Data Processing through Complex Event Processing</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> Seeking Higher Performance en Real-Time Data Processing through Complex Event Processing</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> G. Ortiz, A. Bazan-Muñoz, P. Caballero-Torres, J. Rosa-Bilbao, I. Medina-Bulo, J. Boubeta-Puig, A. García-de-Prado</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> G. Ortiz, A. Bazan-Muñoz, P. Caballero-Torres, J. Rosa-Bilbao, I. Medina-Bulo, J. Boubeta-Puig, A. García-de-Prado</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> Ninth International Conference on Big Data, Small Data, Linked Data and Open Data (ALLDATA 2023)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> Ninth International Conference on Big Data, Small Data, Linked Data and Open Data (ALLDATA 2023)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Venecia, Italia</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Venice, Italy</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Abril 2023</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> April 2023</p>
+                                    
+                                    <p data-lang="es"><strong>Páginas:</strong> 29-34</p>
+                                    <p data-lang="en" class="d-none"><strong>Pages:</strong> 29-34</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conferencia 7 -->
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf7" aria-expanded="false" aria-controls="conf7">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2022</span>
+                                        <span data-lang="es">WESOACS 2022 - Monitorización en tiempo real de redes Blockchain</span>
+                                        <span data-lang="en" class="d-none">WESOACS 2022 - Real-time Monitoring of Blockchain Networks</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf7" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Towards Real-time Monitoring of Blockchain Networks through a Low-code Tool</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> Towards Real-time Monitoring of Blockchain Networks through a Low-code Tool</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> 18th International Workshop on Engineering Service-Oriented Applications and Cloud Services (WESOACS 2022)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> 18th International Workshop on Engineering Service-Oriented Applications and Cloud Services (WESOACS 2022)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Sevilla, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Seville, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Noviembre 2022</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> November 2022</p>
+                                    
+                                    <p data-lang="es"><strong>Volumen:</strong> 13821</p>
+                                    <p data-lang="en" class="d-none"><strong>Volume:</strong> 13821</p>
+                                    
+                                    <p data-lang="es"><strong>Páginas:</strong> 287-298</p>
+                                    <p data-lang="en" class="d-none"><strong>Pages:</strong> 287-298</p>
+                                    
+                                    <p data-lang="es"><strong>DOI:</strong> 10.1007/978-3-031-26507-5_23</p>
+                                    <p data-lang="en" class="d-none"><strong>DOI:</strong> 10.1007/978-3-031-26507-5_23</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conferencia 8 -->
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf8" aria-expanded="false" aria-controls="conf8">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2022</span>
+                                        <span data-lang="es">ICSOC 2022 - Node4Chain: Extendiendo herramientas de bajo código</span>
+                                        <span data-lang="en" class="d-none">ICSOC 2022 - Node4Chain: Extending Low-code Tools</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf8" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Node4Chain: Extending Node-RED Low-code Tool for Monitoring Blockchain Networks</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> Node4Chain: Extending Node-RED Low-code Tool for Monitoring Blockchain Networks</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> 20th International Conference on Service-Oriented Computing (ICSOC 2022)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> 20th International Conference on Service-Oriented Computing (ICSOC 2022)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Sevilla, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Seville, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Noviembre 2022</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> November 2022</p>
+                                    
+                                    <p data-lang="es"><strong>Volumen:</strong> 13821</p>
+                                    <p data-lang="en" class="d-none"><strong>Volume:</strong> 13821</p>
+                                    
+                                    <p data-lang="es"><strong>Páginas:</strong> 355-358</p>
+                                    <p data-lang="en" class="d-none"><strong>Pages:</strong> 355-358</p>
+                                    
+                                    <p data-lang="es"><strong>DOI:</strong> 10.1007/978-3-031-26507-5_32</p>
+                                    <p data-lang="en" class="d-none"><strong>DOI:</strong> 10.1007/978-3-031-26507-5_32</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conferencia 9 -->
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf9" aria-expanded="false" aria-controls="conf9">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2022</span>
+                                        <span data-lang="es">JIPII 2022 - Detección de situaciones en calidad del aire</span>
+                                        <span data-lang="en" class="d-none">JIPII 2022 - Detection of air quality situations</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf9" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Una Solución de Bajo Código para la Detección Automática de Situaciones de Interés en el Ámbito de la Calidad del Aire</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> A Low-Code Solution for Automatic Detection of Situations of Interest in the Field of Air Quality</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> Second Doctoral Consortium in Computer Science (JIPII 2022)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> Second Doctoral Consortium in Computer Science (JIPII 2022)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Cádiz, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Cádiz, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Junio 2022</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> June 2022</p>
+                                    
+                                    <p data-lang="es"><strong>Handle:</strong> 10498/27607</p>
+                                    <p data-lang="en" class="d-none"><strong>Handle:</strong> 10498/27607</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf10" aria-expanded="false" aria-controls="conf10">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2021</span>
+                                        <span data-lang="es">JCIS 2021 - Votaciones a rector con DApp</span>
+                                        <span data-lang="en" class="d-none">JCIS 2021 - Rector elections with DApp</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf10" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Una Aplicación Descentralizada de Gestión de Votaciones a Rector de Universidad</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> A Decentralized Application for Managing University Rector Elections</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> XVI Jornadas de Ingeniería de Ciencia e Ingeniería de Servicios (JCIS 2021)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> XVI Conference on Science and Service Engineering (JCIS 2021)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Málaga, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Málaga, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Septiembre 2021</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> September 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf11" aria-expanded="false" aria-controls="conf11">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2021</span>
+                                        <span data-lang="es">JCIS 2021 - Ciberataques a Blockchain en IoT</span>
+                                        <span data-lang="en" class="d-none">JCIS 2021 - Cyberattacks on Blockchain in IoT</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf11" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Ciberataques a Blockchain en Entornos IoT: un Estudio de Mapeo Sistemático</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> Cyberattacks on Blockchain in IoT Environments: A Systematic Mapping Study</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> M. J. Peregrina-Pérez, J. Lagares-Galán, P. J. Navas-Pérez, J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> M. J. Peregrina-Pérez, J. Lagares-Galán, P. J. Navas-Pérez, J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> XVI Jornadas de Ingeniería de Ciencia e Ingeniería de Servicios (JCIS 2021)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> XVI Conference on Science and Service Engineering (JCIS 2021)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Málaga, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Málaga, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Septiembre 2021</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> September 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf12" aria-expanded="false" aria-controls="conf12">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2021</span>
+                                        <span data-lang="es">SOSE 2021 - RectorDApp</span>
+                                        <span data-lang="en" class="d-none">SOSE 2021 - RectorDApp</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf12" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> RectorDApp: Aplicación Descentralizada para la Gestión de Elecciones a Rector</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> RectorDApp: Decentralized Application for Managing University Rector Elections</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> 2021 IEEE International Conference on Service-Oriented System Engineering (SOSE 2021)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> 2021 IEEE International Conference on Service-Oriented System Engineering (SOSE 2021)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Oxford, Reino Unido</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Oxford, United Kingdom</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Agosto 2021</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> August 2021</p>
+                                    
+                                    <p data-lang="es"><strong>DOI:</strong> 10.1109/SOSE52839.2021.00024</p>
+                                    <p data-lang="en" class="d-none"><strong>DOI:</strong> 10.1109/SOSE52839.2021.00024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item shadow-sm mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conf13" aria-expanded="false" aria-controls="conf13">
+                                    <div>
+                                        <span class="badge bg-primary me-2">2021</span>
+                                        <span data-lang="es">JIPII 2021 - Trazabilidad en cadenas de suministro</span>
+                                        <span data-lang="en" class="d-none">JIPII 2021 - Supply Chain Traceability</span>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="conf13" class="accordion-collapse collapse" data-bs-parent="#accordionConferences">
+                                <div class="accordion-body">
+                                    <p data-lang="es"><strong>Título:</strong> Aplicación Descentralizada para la Gestión de la Trazabilidad de Cadenas de Suministro</p>
+                                    <p data-lang="en" class="d-none"><strong>Title:</strong> Decentralized Application for Managing Supply Chain Traceability</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Conferencia:</strong> Doctoral Consortium in Computer Science (JIPII 2021)</p>
+                                    <p data-lang="en" class="d-none"><strong>Conference:</strong> Doctoral Consortium in Computer Science (JIPII 2021)</p>
+                                    
+                                    <p data-lang="es"><strong>Lugar:</strong> Cádiz, España</p>
+                                    <p data-lang="en" class="d-none"><strong>Location:</strong> Cádiz, Spain</p>
+                                    
+                                    <p data-lang="es"><strong>Fecha:</strong> Junio 2021</p>
+                                    <p data-lang="en" class="d-none"><strong>Date:</strong> June 2021</p>
+                                    
+                                    <p data-lang="es"><strong>Handle:</strong> 10498/26026</p>
+                                    <p data-lang="en" class="d-none"><strong>Handle:</strong> 10498/26026</p>
+                                </div>
+                            </div>
+                        </div>                                                                                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                    
+
+    <!-- Sección Capítulos de Libro -->
+    <section id="bookChapters" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-lang="es">Capítulos de Libro</h2>
+            <h2 class="section-title text-center mb-5 d-none" data-lang="en">Book Chapters</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-book fs-1 text-primary"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h3 class="card-title" data-lang="es">Ethereum blockchain platform</h3>
+                                    <h3 class="card-title d-none" data-lang="en">Ethereum blockchain platform</h3>
+                                    
+                                    <p class="text-muted mb-3" data-lang="es">Capítulo 15 en "Distributed Computing to Blockchain"</p>
+                                    <p class="text-muted mb-3 d-none" data-lang="en">Chapter 15 in "Distributed Computing to Blockchain"</p>
+                                    
+                                    <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                                    
+                                    <p data-lang="es"><strong>Editores:</strong> R. Pandey, S. Goundar, S. Fatima</p>
+                                    <p data-lang="en" class="d-none"><strong>Editors:</strong> R. Pandey, S. Goundar, S. Fatima</p>
+                                    
+                                    <p data-lang="es"><strong>Editorial:</strong> Elsevier Academic Press, 2023</p>
+                                    <p data-lang="en" class="d-none"><strong>Publisher:</strong> Elsevier Academic Press, 2023</p>
+                                    
+                                    <p data-lang="es"><strong>Páginas:</strong> 267-282</p>
+                                    <p data-lang="en" class="d-none"><strong>Pages:</strong> 267-282</p>
+                                    
+                                    <p data-lang="es"><strong>DOI:</strong> 10.1016/B978-0-323-96146-2.00006-1</p>
+                                    <p data-lang="en" class="d-none"><strong>DOI:</strong> 10.1016/B978-0-323-96146-2.00006-1</p>
+                                    
+                                    <p data-lang="es"><strong>ISBN:</strong> 978-0-323-96146-2</p>
+                                    <p data-lang="en" class="d-none"><strong>ISBN:</strong> 978-0-323-96146-2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Registros de Propiedad Intelectual -->
+    <section id="intellectualProperty" class="container">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-lang="es">Registros de Propiedad Intelectual</h2>
+            <h2 class="section-title text-center mb-5 d-none" data-lang="en">Intellectual Property Registrations</h2>
+            
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-primary border-top border-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="card-title" data-lang="es">node-red-contrib-evm-monitoring</h4>
+                                <h4 class="card-title d-none" data-lang="en">node-red-contrib-evm-monitoring</h4>
+                                <i class="bi bi-code-square text-primary fs-3"></i>
+                            </div>
+                            <p class="card-text mt-3" data-lang="es">Software para la monitorización de redes blockchain compatibles con EVM.</p>
+                            <p class="card-text mt-3 d-none" data-lang="en">Software for monitoring EVM-compatible blockchain networks.</p>
+                            
+                            <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                            <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                            
+                            <p data-lang="es"><strong>Registro:</strong> 2407108590446</p>
+                            <p data-lang="en" class="d-none"><strong>Registration:</strong> 2407108590446</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-primary border-top border-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="card-title" data-lang="es">node-red-contrib-solidity</h4>
+                                <h4 class="card-title d-none" data-lang="en">node-red-contrib-solidity</h4>
+                                <i class="bi bi-code-square text-primary fs-3"></i>
+                            </div>
+                            <p class="card-text mt-3" data-lang="es">Software para el desarrollo y compilación de contratos inteligentes en entorno visual.</p>
+                            <p class="card-text mt-3 d-none" data-lang="en">Software for developing and compiling smart contracts in a visual environment.</p>
+                            
+                            <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                            <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                            
+                            <p data-lang="es"><strong>Registro:</strong> 2407048477180</p>
+                            <p data-lang="en" class="d-none"><strong>Registration:</strong> 2407048477180</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-primary border-top border-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="card-title" data-lang="es">CEPchain</h4>
+                                <h4 class="card-title d-none" data-lang="en">CEPchain</h4>
+                                <i class="bi bi-code-square text-primary fs-3"></i>
+                            </div>
+                            <p class="card-text mt-3" data-lang="es">Plataforma para el procesamiento de eventos complejos en redes blockchain.</p>
+                            <p class="card-text mt-3 d-none" data-lang="en">Platform for complex event processing in blockchain networks.</p>
+                            
+                            <p data-lang="es"><strong>Autores:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                            <p data-lang="en" class="d-none"><strong>Authors:</strong> J. Rosa-Bilbao, J. Boubeta-Puig</p>
+                            
+                            <p data-lang="es"><strong>Registro:</strong> CA-2301133152214-2023</p>
+                            <p data-lang="en" class="d-none"><strong>Registration:</strong> CA-2301133152214-2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Dirección de Trabajos Fin de Grado y Máster -->
+    <section id="thesisSupervision" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-lang="es">Dirección de Trabajos Fin de Grado y Máster</h2>
+            <h2 class="section-title text-center mb-5 d-none" data-lang="en">Bachelor's and Master's Thesis Supervision</h2>
+            
+            <div class="row">
+                <!-- Trabajo 1: Zync -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h4 class="card-title" data-lang="es">Zync: Plataforma software para la gestión de dispositivos IoT</h4>
+                                <h4 class="card-title d-none" data-lang="en">Zync: Software Platform for IoT Device Management</h4>
+                                <span class="badge bg-success text-white">2025</span>
+                            </div>
+                            
+                            <p class="card-text text-justify" data-lang="es">
+                                Plataforma software para la gestión de dispositivos IoT y la detección y monitorización de eventos complejos.
+                            </p>
+                            <p class="card-text text-justify d-none" data-lang="en">
+                                Software platform for IoT device management and complex event detection and monitoring.
+                            </p>
+                            
+                            <div class="mt-3 mb-2">
+                                <span class="badge bg-primary me-2" data-lang="es">Grado</span>
+                                <span class="badge bg-primary me-2 d-none" data-lang="en">Bachelor</span>
+                                <span class="text-muted" data-lang="es">Ingeniería Informática</span>
+                                <span class="text-muted d-none" data-lang="en">Computer Engineering</span>
+                            </div>
+                            
+                            <p class="mb-0 text-muted">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <span data-lang="es">Presentado: Pendiente</span>
+                                <span class="d-none" data-lang="en">Defended: Pending</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trabajo 2: Normativas de ciberseguridad -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h4 class="card-title" data-lang="es">Análisis de normativas de ciberseguridad en el sector ferroviario</h4>
+                                <h4 class="card-title d-none" data-lang="en">Analysis of Cybersecurity Regulations in the Railway Sector</h4>
+                                <span class="badge bg-success text-white">2024</span>
+                            </div>
+                            
+                            <p class="card-text text-justify" data-lang="es">
+                                Estudio sobre las normativas y regulaciones de ciberseguridad aplicables al sector del transporte ferroviario.
+                            </p>
+                            <p class="card-text text-justify d-none" data-lang="en">
+                                Study on cybersecurity regulations and standards applicable to the railway transportation sector.
+                            </p>
+                            
+                            <div class="mt-3 mb-2">
+                                <span class="badge bg-info me-2" data-lang="es">Máster</span>
+                                <span class="badge bg-info me-2 d-none" data-lang="en">Master</span>
+                                <span class="text-muted" data-lang="es">Seguridad Informática (Ciberseguridad)</span>
+                                <span class="text-muted d-none" data-lang="en">Computer Security (Cybersecurity)</span>
+                            </div>
+                            
+                            <p class="mb-0 text-muted">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <span data-lang="es">Presentado: 23/09/2024</span>
+                                <span class="d-none" data-lang="en">Defended: 09/23/2024</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trabajo 3: Auditoría de seguridad web -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h4 class="card-title" data-lang="es">Auditoría externa de la seguridad web de una empresa sobre formación blockchain</h4>
+                                <h4 class="card-title d-none" data-lang="en">External Web Security Audit for a Blockchain Training Company</h4>
+                                <span class="badge bg-success text-white">2024</span>
+                            </div>
+                            
+                            <p class="card-text text-justify" data-lang="es">
+                                Auditoría externa de la seguridad web de una empresa sobre formación y servicios blockchain.
+                            </p>
+                            <p class="card-text text-justify d-none" data-lang="en">
+                                External web security audit for a company focused on blockchain training and services.
+                            </p>
+                            
+                            <div class="mt-3 mb-2">
+                                <span class="badge bg-info me-2" data-lang="es">Máster</span>
+                                <span class="badge bg-info me-2 d-none" data-lang="en">Master</span>
+                                <span class="text-muted" data-lang="es">Seguridad Informática (Ciberseguridad)</span>
+                                <span class="text-muted d-none" data-lang="en">Computer Security (Cybersecurity)</span>
+                            </div>
+                            
+                            <p class="mb-0 text-muted">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <span data-lang="es">Presentado: 26/06/2024</span>
+                                <span class="d-none" data-lang="en">Defended: 06/26/2024</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trabajo 4: Metodologías para auditorías IoT -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h4 class="card-title" data-lang="es">Análisis comparativo de metodologías para auditorías de seguridad en IoT</h4>
+                                <h4 class="card-title d-none" data-lang="en">Comparative Analysis of Security Audit Methodologies for IoT Environments</h4>
+                                <span class="badge bg-success text-white">2024</span>
+                            </div>
+                            
+                            <p class="card-text text-justify" data-lang="es">
+                                Análisis comparativo de metodologías para la realización de auditorías de seguridad en entornos IoT.
+                            </p>
+                            <p class="card-text text-justify d-none" data-lang="en">
+                                Comparative analysis of methodologies for conducting security audits in IoT environments.
+                            </p>
+                            
+                            <div class="mt-3 mb-2">
+                                <span class="badge bg-info me-2" data-lang="es">Máster</span>
+                                <span class="badge bg-info me-2 d-none" data-lang="en">Master</span>
+                                <span class="text-muted" data-lang="es">Seguridad Informática (Ciberseguridad)</span>
+                                <span class="text-muted d-none" data-lang="en">Computer Security (Cybersecurity)</span>
+                            </div>
+                            
+                            <p class="mb-0 text-muted">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <span data-lang="es">Presentado: 30/01/2024</span>
+                                <span class="d-none" data-lang="en">Defended: 01/30/2024</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trabajo 5: Aplicación descentralizada -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h4 class="card-title" data-lang="es">Una aplicación descentralizada para la verificación de la integridad del vídeo</h4>
+                                <h4 class="card-title d-none" data-lang="en">A Decentralized Application for Video Integrity Verification</h4>
+                                <span class="badge bg-success text-white">2023</span>
+                            </div>
+                            
+                            <p class="card-text text-justify" data-lang="es">
+                                Desarrollo de una aplicación descentralizada (DApp) para verificar la integridad y autenticidad de contenido de vídeo.
+                            </p>
+                            <p class="card-text text-justify d-none" data-lang="en">
+                                Development of a decentralized application (DApp) to verify the integrity and authenticity of video content.
+                            </p>
+                            
+                            <div class="mt-3 mb-2">
+                                <span class="badge bg-primary me-2" data-lang="es">Grado</span>
+                                <span class="badge bg-primary me-2 d-none" data-lang="en">Bachelor</span>
+                                <span class="text-muted" data-lang="es">Ingeniería Informática</span>
+                                <span class="text-muted d-none" data-lang="en">Computer Engineering</span>
+                            </div>
+                            
+                            <p class="mb-0 text-muted">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                <span data-lang="es">Presentado: 19/07/2023</span>
+                                <span class="d-none" data-lang="en">Defended: 07/19/2023</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="container">
+        <h2 class="section-title" data-lang="es">Contacto</h2>
+        <h2 class="section-title d-none" data-lang="en">Contact</h2>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form action="https://formspree.io/f/xwplrnqb" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label" data-lang="es">Nombre</label>
+                        <label for="name" class="form-label d-none" data-lang="en">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label" data-lang="es">Email</label>
+                        <label for="email" class="form-label d-none" data-lang="en">Email</label>
+                        <input type="email" class="form-control" id="email" name="_replyto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label" data-lang="es">Mensaje</label>
+                        <label for="message" class="form-label d-none" data-lang="en">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" data-lang="es">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary d-none" data-lang="en">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p data-lang="es">&copy; 2025 Jesús Rosa Bilbao - Todos los derechos reservados</p>
+        <p data-lang="en" class="d-none">&copy; 2025 Jesús Rosa Bilbao - All rights reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Efecto de navegación al hacer scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll suave para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#' && document.querySelector(targetId)) {
+                        document.querySelector(targetId).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        
+                        // Cierra el menú hamburguesa al hacer clic en un enlace (en vista móvil)
+                        const navbarToggler = document.querySelector('.navbar-toggler');
+                        const navbarCollapse = document.querySelector('.navbar-collapse');
+                        if (navbarCollapse.classList.contains('show')) {
+                            navbarToggler.click();
+                        }
+                    }
+                }
+            });
+        });
+
+        // Función para cambiar el idioma
+        function changeLanguage(lang) {
+            // Ocultar todos los elementos de todos los idiomas
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                element.classList.add('d-none');
+            });
+            
+            // Mostrar solo los elementos del idioma seleccionado
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(element => {
+                element.classList.remove('d-none');
+            });
+            
+            // Actualizar el texto del selector de idioma
+            document.getElementById('current-lang').textContent = lang.toUpperCase();
+            
+            // Actualizar la bandera - Esta es la línea que faltaba
+            const flagElement = document.getElementById('current-lang-flag');
+            // Primero eliminar todas las clases de bandera existentes
+            flagElement.className = '';
+            // Luego añadir las clases necesarias, con el código de país correcto
+            flagElement.classList.add('flag-icon', `flag-icon-${lang === 'en' ? 'us' : lang}`);
+            
+            // Almacenar la preferencia de idioma en localStorage
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Establecer el idioma basado en la preferencia guardada o usar español por defecto
+        const savedLanguage = localStorage.getItem('preferredLanguage') || 'es';
+        changeLanguage(savedLanguage);
+        
+        // Manejar los botones de cambio de perfil
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.btn-group.profile-toggle .btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const profileType = this.getAttribute('data-profile');
+                    if (profileType === 'professional') {
+                        window.location.href = 'index.html';
+                    } else if (profileType === 'researcher') {
+                        window.location.href = 'researcher.html';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
